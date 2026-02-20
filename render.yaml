@@ -1,0 +1,25 @@
+services:
+  # Backend
+  - type: web
+    name: expense-server
+    env: node
+    plan: free
+    buildCommand: cd main/server && npm install
+    startCommand: cd main/server && node server.js
+    envVars:
+      - key: PORT
+        value: 10000
+
+  # Frontend
+  - type: web
+    name: expense-client
+    env: static
+    plan: free
+    buildCommand: cd main/client && npm install && npm run build
+    staticPublishPath: main/client/dist
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: expense-server
+          envVar: SERVICE_URL_INTERNAL
