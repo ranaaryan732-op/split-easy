@@ -1,4 +1,5 @@
 import { Logo } from "./Logo"
+import { ThemeToggle } from "./ThemeToggle"
 
 export function Header({ groupTotal }) {
     return (
@@ -24,13 +25,15 @@ export function Header({ groupTotal }) {
                 </span>
             </div>
 
-            <div className="header-right">
+            <div className="header-right" style={{ display: "flex", alignItems: "center", gap: "24px" }}>
                 <div className="header-group-total">
                     <span className="group-total-label">GROUP TOTAL</span>
                     <span className="group-total-amount">
                         ₹{groupTotal ? groupTotal.toLocaleString('en-IN', { minimumFractionDigits: 2 }) : "0.00"}
                     </span>
                 </div>
+                <div style={{ height: "32px", width: "1px", background: "var(--border)" }}></div>
+                <ThemeToggle />
             </div>
 
             <style jsx>{`
