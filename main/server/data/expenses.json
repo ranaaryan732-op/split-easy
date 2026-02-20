@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1771527446047,
+    "description": "Dinner",
+    "amount": 10000,
+    "paidBy": "John",
+    "date": "2026-02-19T18:57:26.047Z",
+    "splitAmong": [
+      "John",
+      "Chris",
+      "Michael"
+    ]
+  },
+  {
+    "id": 1771527491490,
+    "description": "taxi",
+    "amount": 30000,
+    "paidBy": "Chris",
+    "date": "2026-02-19T18:58:11.490Z",
+    "splitAmong": [
+      "John",
+      "Chris",
+      "Michael"
+    ]
+  }
+]
